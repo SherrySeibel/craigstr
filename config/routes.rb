@@ -9,5 +9,7 @@ Rails.application.routes.draw do
     resources :admin_options, only: [:index]
   end
 
+  resources :posts, only: [:new, :create]
+
   root to: "sessions#new"
 end
