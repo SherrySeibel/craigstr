@@ -17,11 +17,11 @@ ActiveRecord::Schema.define(version: 20140721192728) do
   enable_extension "plpgsql"
 
   create_table "posts", force: true do |t|
-    t.string   "title",                       null: false
-    t.string   "description",                 null: false
-    t.string   "image_url"
-    t.string   "category"
-    t.string   "region"
+    t.string   "title",       default: "",    null: false
+    t.string   "description", default: "",    null: false
+    t.string   "image_url",   default: "",    null: false
+    t.string   "category",    default: "",    null: false
+    t.string   "region",      default: "",    null: false
     t.boolean  "spam",        default: false
     t.integer  "user_id"
     t.datetime "created_at",                  null: false
