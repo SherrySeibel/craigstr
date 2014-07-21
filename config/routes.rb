@@ -5,7 +5,8 @@ Rails.application.routes.draw do
   resources :users, only: [:new, :create]
 
   constraints Monban::Constraints::SignedIn.new do
-    get "/", to: "admin_options#index", as: :admin_option
+    get "/", to: "regions#index", as: :region
+    resources :admin_options, only: [:index]
   end
 
   root to: "sessions#new"
