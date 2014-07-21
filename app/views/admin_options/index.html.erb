@@ -1,0 +1,15 @@
+<h2>Admin Controll Board</h2>
+
+<%= form_for :region do |region| %>
+  <%= region.text_field :location, placeholder: "Region" %>
+  <%= region.submit "Create New Region" %>
+<% end %>
+
+<%= form_for :category do |category| %>
+  <%= category.text_field :category, placeholder: "Category Name" %>
+  <%= category.submit "Create" %>
+<% end %>
+
+<%= form_for :spam do |spam| %>
+
+<% end %>
