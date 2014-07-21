@@ -14,6 +14,8 @@
   <p>You are currently signed in. (<%= link_to "Sign out?", session_path, method: :delete %>)</p>
 <% end %>
 
+<%= link_to "Admin Control Board", :admin_options %>
+
 <%= yield %>
 
 </body>
