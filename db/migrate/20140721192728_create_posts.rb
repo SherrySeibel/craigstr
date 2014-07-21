@@ -6,11 +6,11 @@ class CreatePosts < ActiveRecord::Migration
       t.string :image_url, null: false, default: ""
       t.string :category, null: false, default: ""
       t.string :region, null: false, default: ""
-      t.boolean :spam, default: false
+      t.boolean :spam, default: false, null: false
       t.belongs_to :user, null: :false
 
       t.timestamps null: false
     end
-    add_index :posts, :user_id, unique: true
+    add_index :posts, :user_id
   end
 end
