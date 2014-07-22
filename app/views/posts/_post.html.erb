@@ -1,10 +1,10 @@
-<h3> <%= @post.title %></h3>
+<h3><%= @post.title %></h3>
 <div>
   <p><b>Region: </b> <%= @post.region %></p>
   <p><b>Category: </b> <%= @post.category %></p>
-  <p><b>Image: </b><%= @post.image_url %> </p>
+  <p><b>Image: </b><%= image_for @post.image_url %> </p>
 </div>
 
 <div>
-<b>Description: </b><%= @post.description %>
+  <b>Description: </b><%= @post.description %>
 </div>
