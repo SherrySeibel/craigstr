@@ -5,6 +5,8 @@ class Post < ActiveRecord::Base
   validates :category, presence: true
   validates :region, presence: true
   validates :user_id, presence: true
-  validates :spam, presence: true
+  validates :spam, inclusion: [true, false]
+
+  belongs_to :user
 
 end
