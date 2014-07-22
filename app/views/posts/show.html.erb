@@ -1,1 +1,5 @@
 <%= render @post %>
+
+<% if @post.user_id == current_user.id %>
+  <%= link_to "Edit Post", [:edit, :post] %>
+<% end %>

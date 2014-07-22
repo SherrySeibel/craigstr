@@ -1,4 +1,4 @@
-<h2> New Post </h2>
+<h2> Edit Post </h2>
 
 <%= form_for @post do |form| %>
   <div>
@@ -26,5 +26,5 @@
     <%= form.text_field :region %>
   </div>
 
-  <%= form.submit %>
+  <%= form.submit "Edit Post" %>
 <% end %>

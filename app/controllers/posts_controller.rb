@@ -4,9 +4,9 @@ class PostsController < ApplicationController
   end
 
   def create
-    @posts = current_user.posts.new(post_params)
-    if @posts.save
-      redirect_to root_path
+    @post = current_user.posts.new(post_params)
+    if @post.save
+      redirect_to :post
     else
       render :new
     end
@@ -14,6 +14,15 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+  end
+
+  def edit
+    @post = Post.find(params[:id])
+  end
+
+  def update
+    @post = Post.find(params[:id]).update(post_params)
+    redirect_to :post
   end
 
   private
