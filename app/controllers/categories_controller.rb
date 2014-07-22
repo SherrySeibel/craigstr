@@ -1,6 +1,5 @@
 class CategoriesController < ApplicationController
   def index
-    @category = Category.new
   end
 
   def create
@@ -9,7 +8,8 @@ class CategoriesController < ApplicationController
     if @category.save
       redirect_to :dashboard 
     else
-      render :index
+      @region = Region.new
+      render "admin_options/index"
     end
   end
 
