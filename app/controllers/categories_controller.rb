@@ -16,9 +16,10 @@ class CategoriesController < ApplicationController
   private
 
   def category_params
-    params.require(:category).permit(
-      :name,
-      :region_id,
-    )
+    params.require(:category).
+      permit(
+        :name,
+        :region_id,
+      )
   end
 end
