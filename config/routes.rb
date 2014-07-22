@@ -11,7 +11,5 @@ Rails.application.routes.draw do
 
   resources :posts, only: [:new, :create, :show]
 
-  # resources :posts, only: [:show]
-
   root to: "sessions#new"
 end
