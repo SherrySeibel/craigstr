@@ -14,13 +14,13 @@
   </div>
 
   <div>
-    <%= form.label :category %>
-    <%= form.text_field :category %>
+    <%= form.label :category, "Category:" %>
+    <%= form.collection_select :category, Category.order(:name), :id, :name %>
   </div>
 
   <div>
-    <%= form.label :region %>
-    <%= form.text_field :region %>
+    <%= form.label :region, "Select a region:" %>
+    <%= form.collection_select :region, Region.order(:name), :id, :name %>
   </div>
 
   <%= form.submit "Submit" %>
