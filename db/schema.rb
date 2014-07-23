@@ -43,6 +43,8 @@ ActiveRecord::Schema.define(version: 20140722152904) do
     t.datetime "updated_at", null: false
   end
 
+  add_index "regions", ["name"], name: "index_regions_on_name", unique: true, using: :btree
+
   create_table "users", force: true do |t|
     t.string   "email",                           null: false
     t.string   "password_digest",                 null: false
