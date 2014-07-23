@@ -8,5 +8,4 @@ class Post < ActiveRecord::Base
   validates :spam, inclusion: [true, false]
 
   belongs_to :user
-
 end

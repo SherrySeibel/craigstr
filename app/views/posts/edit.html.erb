@@ -1,30 +1,5 @@
 <h2> Edit Post </h2>
 
 <%= form_for @post do |form| %>
-  <div>
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-  </div>
-
-  <div>
-    <%= form.label :description %>
-    <%= form.text_area :description %>
-  </div>
-
-  <div>
-    <%= form.label :image_url %>
-    <%= form.text_field :image_url %>
-  </div>
-
-  <div>
-    <%= form.label :category %>
-    <%= form.text_field :category %>
-  </div>
-
-  <div>
-    <%= form.label :region %>
-    <%= form.text_field :region %>
-  </div>
-
-  <%= form.submit "Edit Post" %>
+  <%= render "form", form: form %>
 <% end %>
