@@ -22,7 +22,9 @@ class PostsController < ApplicationController
 
   def update
     post = Post.find(params[:id])
-    post.update(post_params)
+    if post.user_id == current_user.id
+      post.update(post_params)
+    end
     redirect_to post
   end
 
