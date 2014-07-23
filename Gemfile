@@ -24,8 +24,11 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'monban'
 gem 'monban-generators'
 
-# Adds gem for windows systems to obtain timezone data
+# Add gem for windows systems to obtain timezone data
 gem 'tzinfo-data'
+
+# Use Kaminari for pagination
+gem 'kaminari'
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 # gem 'spring',        group: :development
