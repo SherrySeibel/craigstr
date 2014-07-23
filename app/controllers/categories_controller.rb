@@ -6,7 +6,7 @@ class CategoriesController < ApplicationController
     @category = Category.new(category_params)
 
     if @category.save
-      redirect_to :dashboard 
+      redirect_to :dashboard
     else
       @region = Region.new
       render "admin_options/index"
