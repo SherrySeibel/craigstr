@@ -2,7 +2,7 @@
 
 <% if @post.spam? %>
   <h2>This post has been marked as spam. Please be careful while our administrators review the post.</h2>
-  <% else %>
+<% else %>
   <%= button_to "Mark as spam", [@post, :spam] %>
 <% end %>
 
