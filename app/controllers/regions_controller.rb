@@ -1,5 +1,7 @@
 class RegionsController < ApplicationController
-  def index
+  def show
+    @region = Region.find(params[:id])
+    @categories = Category.all
   end
 
   def create

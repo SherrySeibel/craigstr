@@ -6,9 +6,10 @@ Rails.application.routes.draw do
 
   constraints Monban::Constraints::SignedIn.new do
     get "/", to: "dashboards#index", as: :dashboard
+    resources :regions, only: [:show, :create] do
+      resources :categories, only: [:show, :create, :edit]
+    end
     resources :admin_options, only: [:index, :create]
-    resources :regions, only: [:create]
-    resources :categories, only: [:create]
   end
 
     resources :posts, only: [:new, :create, :show, :edit, :update, :destroy] do

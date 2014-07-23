@@ -7,14 +7,8 @@
   <%= region.submit "Create New Region" %>
 <% end %>
 
-<h3>Create a new category for a region:</h3>
-<%= form_for @category do |category| %>
-  <%= render "errors", target: @category %>
-  <%= category.label :region, "Select a region:" %>
-  <%= category.collection_select :region_id, Region.order(:name), :id, :name %>
-  <%= category.text_field :name, placeholder: "Enter New Category..." %>
-  <%= category.submit "Create" %>
-<% end %>
+<h2>Regions</h2>	
+<%= render "region_list" %>
 
 <h3>All marked spam</h3>
 <p>Please moderate suspected spam for your region.</p>

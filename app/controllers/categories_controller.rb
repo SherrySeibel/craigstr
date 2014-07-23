@@ -1,5 +1,6 @@
 class CategoriesController < ApplicationController
-  def index
+  def show
+    @category = Category.find(params[:region_id])
   end
 
   def create

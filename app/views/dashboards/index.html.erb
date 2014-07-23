@@ -1,1 +1,9 @@
 <h2>Select your region</h2>
+
+<% @regions.each do |region| %>
+	<ul>
+		<li>
+			<%= link_to region.name %>
+		</li>
+	</ul>
+<% end %>
