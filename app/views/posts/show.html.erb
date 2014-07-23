@@ -2,4 +2,5 @@
 
 <% if current_user.owns?(@post) %>
   <%= link_to "Edit Post", [:edit, :post] %>
+  <%= link_to "Delete Post", @post, method: :delete %>
 <% end %>
