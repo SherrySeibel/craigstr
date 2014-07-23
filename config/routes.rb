@@ -11,7 +11,7 @@ Rails.application.routes.draw do
     resources :categories, only: [:create]
   end
 
-  resources :posts, only: [:new, :create, :show, :edit, :update, :destroy]
+  resources :posts, only: [:index, :new, :create, :show, :edit, :update, :destroy]
 
   root to: "sessions#new"
 end
