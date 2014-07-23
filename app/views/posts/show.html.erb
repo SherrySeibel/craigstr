@@ -1,5 +1,11 @@
 <%= render @post %>
 
+<% if @post.spam? %>
+  <h2>This post has been marked as spam. Please be careful while our administrators review the post.</h2>
+  <% else %>
+  <%= button_to "Mark as spam", [@post, :spam] %>
+<% end %>
+
 <% if current_user.owns?(@post) %>
   <%= link_to "Edit Post", [:edit, :post] %>
   <%= link_to "Delete Post", @post, method: :delete %>

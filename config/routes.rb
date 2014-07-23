@@ -11,7 +11,9 @@ Rails.application.routes.draw do
     resources :categories, only: [:create]
   end
 
-  resources :posts
+    resources :posts, only: [:new, :create, :show, :edit, :update, :destroy] do
+      resource :spam, only: [:create]
+    end
 
   root to: "sessions#new"
 end
