@@ -3,6 +3,10 @@ class CategoriesController < ApplicationController
     @category = Category.find(params[:region_id])
   end
 
+  def new
+    @category = Category.new
+  end
+
   def create
     @category = Category.new(category_params)
 
@@ -20,7 +24,8 @@ class CategoriesController < ApplicationController
     params.require(:category).
       permit(
         :name,
-        :region_id,
+      ).merge(
+       region_id: params[:region_id]
       )
   end
 end

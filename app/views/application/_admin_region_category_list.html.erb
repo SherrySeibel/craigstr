@@ -1,10 +1,11 @@
 <% @regions.each do |region| %>
-		<ul>
-			<li>
-				<h4><%= link_to region.name, [region] %></h4>
-			</li>
-				<ul>
-					<li><%= render "categories", region: region %></li>
-				</ul>
-		</ul>
+  <ul>
+    <li>
+      <h4><%= link_to region.name, region %></h4>
+      <%= link_to "Add a Category", [:new, region, :category] %>
+    </li>
+    <ul>
+      <%= render "categories", region: region %>
+    </ul>
+  </ul>
 <% end %>

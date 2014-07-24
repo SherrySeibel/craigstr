@@ -1,0 +1,8 @@
+<h1>Create a new category:</h1>
+
+<h3>Create a new category for a region:</h3>
+<%= form_for [:region, @category] do |category| %>
+	<%= render "errors", target: @category %>  
+  <%= category.text_field :name, placeholder: "Enter New Category..." %>
+  <%= category.submit "Create" %>
+<% end %>
