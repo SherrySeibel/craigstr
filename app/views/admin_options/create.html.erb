@@ -1,10 +1,10 @@
 <h1>Create a new category:</h1>
 
 <h3>Create a new category for a region:</h3>
-<%= form_for @category do |category| %>
+<%= form_for @category do |form| %>
   <%= render "errors", target: @category %>  
-  <%= category.label :region, "Select a region:" %>
-  <%= category.collection_select :region_id, @regions, :id, :name %>
-  <%= category.text_field :name, placeholder: "Enter New Category..." %>
-  <%= category.submit "Create" %>
+  <%= form.label :region, "Select a region:" %>
+  <%= form.collection_select :region_id, @regions, :id, :name %>
+  <%= form.text_field :name, placeholder: "Enter New Category..." %>
+  <%= form.submit "Create" %>
 <% end %>
