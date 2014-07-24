@@ -8,8 +8,8 @@ class CategoriesController < ApplicationController
   end
 
   def create
-    persist_region_id = category_params.merge(region_id: params[:region_id])
-    category = Category.new(persist_region_id)
+    completed_category = category_params.merge(region_id: params[:region_id])
+    category = Category.new(completed_category)
 
     if category.save
       redirect_to :dashboard 
