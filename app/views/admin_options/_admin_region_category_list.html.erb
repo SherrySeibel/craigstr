@@ -2,7 +2,7 @@
   <ul>
     <li>
       <h4><%= link_to region.name, region %></h4>
-      <%= link_to "Add a Category", [:new, region, :category] %>
+      <div class="add_category"><%= link_to "Add a Category", [:new, region, :category] %></div>
     </li>
     <ul>
       <%= render region.categories %>

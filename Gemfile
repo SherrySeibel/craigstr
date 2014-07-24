@@ -27,6 +27,12 @@ gem 'monban-generators'
 # Adds gem for windows systems to obtain timezone data
 gem 'tzinfo-data'
 
+gem 'bourbon'
+
+gem 'neat'
+
+gem 'bitters'
+
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 # gem 'spring',        group: :development
 
