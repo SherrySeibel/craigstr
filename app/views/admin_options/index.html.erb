@@ -9,7 +9,7 @@
 
 <h3>Create a new category for a region:</h3>
 <%= form_for @category do |category| %>
-<%= render "errors", target: @category %>
+  <%= render "errors", target: @category %>
   <%= category.label :region, "Select a region:" %>
   <%= category.collection_select :region_id, Region.order(:name), :id, :name %>
   <%= category.text_field :name, placeholder: "Enter New Category..." %>
