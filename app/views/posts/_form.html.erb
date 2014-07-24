@@ -15,12 +15,12 @@
 
   <div>
     <%= form.label :category, "Category:" %>
-    <%= form.collection_select :category, Category.order(:name), :id, :name %>
+    <%= form.collection_select :category, @categories, :id, :name %>
   </div>
 
   <div>
     <%= form.label :region, "Select a region:" %>
-    <%= form.collection_select :region, Region.order(:name), :id, :name %>
+    <%= form.collection_select :region, @regions, :id, :name %>
   </div>
 
   <%= form.submit "Submit" %>

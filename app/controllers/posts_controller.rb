@@ -5,6 +5,8 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
+    @categories = Category.order("name ASC")
+    @regions = Region.order("name ASC")
   end
 
   def create
