@@ -2,6 +2,7 @@ class RegionsController < ApplicationController
   def show
     @region = Region.find(params[:id])
     @categories = Category.all
+    @posts = Post.all
   end
 
   def create
