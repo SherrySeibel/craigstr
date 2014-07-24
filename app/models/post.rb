@@ -9,8 +9,6 @@ class Post < ActiveRecord::Base
 
   belongs_to :user
 
-
-
   def mark_as_spam
     update_attribute(:spam, true)
   end

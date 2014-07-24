@@ -1,7 +1,5 @@
 <% posts.each do |post| %>
   <li>
-    <%= link_to post.title, post %>
-    by: 
-    <%= post.user.email %>
+    <%= link_to post.title, post %> by: <%= post.user.email %>
   </li>
 <% end %>
