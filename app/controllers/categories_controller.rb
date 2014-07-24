@@ -8,10 +8,11 @@ class CategoriesController < ApplicationController
   end
 
   def create
-    @category = Category.new(category_params)
+    category = Category.new(category_params.merge(
+      region_id: params[:region_id]))
 
-    if @category.save
-      redirect_to :dashboard
+    if category.save
+      redirect_to :dashboard 
     else
       @region = Region.new
       render "admin_options/index"
@@ -24,8 +25,6 @@ class CategoriesController < ApplicationController
     params.require(:category).
       permit(
         :name,
-      ).merge(
-       region_id: params[:region_id]
       )
   end
 end
