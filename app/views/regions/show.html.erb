@@ -1,4 +1,4 @@
 <h1>Welcome to the <%= @region.name %> board!</h1>
 <p>Please select a category:</p>
-<%= render @region.categories %>
+<%= render @region.categories, region: @region, category: @category%>
 <%= render "posts", posts: @posts %>

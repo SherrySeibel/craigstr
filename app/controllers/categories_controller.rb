@@ -1,6 +1,7 @@
 class CategoriesController < ApplicationController
   def show
     @category = Category.find(params[:region_id])
+    @posts = Post.where(params[:category_id])
   end
 
   def new

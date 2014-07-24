@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     get "/", to: "dashboards#index", as: :dashboard
     resources :users, only: [:show]
     resources :regions, only: [:show, :create] do
-      resources :categories, only: [:new, :create]
+      resources :categories, only: [:new, :create, :show]
     end
     resources :admin_options, only: [:index]
     resources :posts, only: [:new, :create, :show, :edit, :update, :destroy] do
