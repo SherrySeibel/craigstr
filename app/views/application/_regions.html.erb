@@ -1,5 +1,5 @@
-<% @regions.each do |region| %>
+<% regions.each do |region| %>
   <ul>
-    <li><h3><%= link_to region.name, [region] %></h3></li>
+    <li><h3><%= link_to region.name, region %></h3></li>
   </ul>
 <% end %>
