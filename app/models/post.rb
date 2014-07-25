@@ -1,7 +1,6 @@
 class Post < ActiveRecord::Base
   validates :title, presence: true
   validates :description, presence: true
-  validates :image_url, presence: true
   validates :category_id, presence: true
   validates :region_id, presence: true
   validates :user_id, presence: true
