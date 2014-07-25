@@ -27,10 +27,13 @@ gem 'monban-generators'
 # Adds gem for windows systems to obtain timezone data
 gem 'tzinfo-data'
 
+# A simple and lightweight mixin library for Sass.
 gem 'bourbon'
 
+#A lightweight semantic grid framework for Sass and Bourbon.
 gem 'neat'
 
+#Scaffold styles, variables and structure for Bourbon projects.
 gem 'bitters'
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
