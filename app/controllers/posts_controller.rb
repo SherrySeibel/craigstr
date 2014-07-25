@@ -47,6 +47,7 @@ class PostsController < ApplicationController
       permit(
         :title,
         :description,
+        :image_url,
         :category_id,
         :region_id,
       )
