@@ -37,7 +37,7 @@ class PostsController < ApplicationController
   def destroy
     post = current_user.posts.find(params[:id])
     post.destroy
-    redirect_to categories_path
+    redirect_to post.categories
   end
 
   private
@@ -48,8 +48,8 @@ class PostsController < ApplicationController
         :title,
         :description,
         :image_url,
-        :category,
-        :region,
+        :category_id,
+        :region_id,
       )
   end
 end
