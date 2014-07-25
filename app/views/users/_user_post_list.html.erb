@@ -1,9 +1,5 @@
-<% posts.each do |post| %>
-  <% if post.user.id == @user.id %>
-    <li>
-      <%= link_to post.title, post %>
-      ...
-      posted <%= time_ago_in_words(post.created_at) %> ago
-    </li>
-  <% end %>
-<% end %>
+<li>
+  <%= link_to post.title, post %>
+  ...
+  posted <%= time_ago_in_words(post.created_at) %> ago
+</li>

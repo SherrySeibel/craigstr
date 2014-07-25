@@ -1,0 +1,14 @@
+body {
+  @include outer-container;
+}
+
+.add_category {
+  background-color: #4B7999;
+  width: 150px;
+  text-align: center;
+  border-radius: 50px;
+}
+
+.add_category a {
+  color: #BFD4E3;
+}

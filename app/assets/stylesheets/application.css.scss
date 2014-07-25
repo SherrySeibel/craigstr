@@ -10,25 +10,9 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
-
  *= require_self
  */
 @import "bourbon";
 @import "base/base";
 @import "neat";
-
-body {
-	@include outer-container;
-}
-
-.add_category {
-	background-color: #4B7999;
-	width: 150px;
-	text-align: center;
-	border-radius: 50px;
-}
-
-.add_category a {
-	color: #BFD4E3;
-}
-
+@import "mainStylesheet"
