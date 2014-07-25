@@ -14,7 +14,9 @@
   <p>You are currently signed in as <%= current_user.email %>. (<%= link_to "Sign out?", session_path, method: :delete %>)</p>
 <% end %>
 
-<%= link_to "Admin Control Board", :admin_options %>
+<% if current_user.admin? %>
+  <%= link_to "Admin Control Board", :admin_options %>
+<% end %>
 
 <%= yield %>
 
