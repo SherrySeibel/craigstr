@@ -11,7 +11,7 @@
 <h1><%= link_to "Craigstr", root_path %></h1>
 
 <% if signed_in? %>
-  <p>You are currently signed in as <%= current_user.email %>. (<%= link_to "Sign out?", session_path, method: :delete %>)</p>
+  <p>Signed in as <%= link_to current_user.email, current_user %>. (<%= link_to "Sign out?", session_path, method: :delete %>)</p>
 <% end %>
 
 <% if current_user.admin? %>
