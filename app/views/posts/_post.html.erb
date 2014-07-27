@@ -1,8 +1,12 @@
-<h3><%= post.title %></h3>
+<h3><%= @post.title %></h3>
 <div>
-  <p><b>Region:</b> <%= post.region %></p>
-  <p><b>Category:</b> <%= post.category %></p>
-  <p><b>Image:</b> <%= image_tag(post.image_url) %></p>
+  <p><b>Region:</b> <%= @post.region %></p>
+  <p><b>Category:</b> <%= @post.category %></p>
+  <% if @post.image_url.present? %>
+    <p><b>Image:</b> <%= image_tag(@post.image_url) %></p>
+  <% end %>
+</div>
+
 <div>
-  <b>Description:</b> <%= post.description %>
+  <b>Description:</b> <%= @post.description %>
 </div>
