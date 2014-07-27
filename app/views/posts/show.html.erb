@@ -8,5 +8,5 @@
 
 <% if current_user.owns?(@post) || current_user.admin? %>
   <%= link_to "Edit Post", [:edit, :post] %>
-  <%= link_to "Delete Post", @post, method: :delete %>
+  <%= link_to "Delete Post", @post, method: :delete, confirm: "Are you sure?" %>
 <% end %>
