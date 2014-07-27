@@ -1,0 +1,10 @@
+<div>
+  <h3>Posts</h3>
+</div>
+<div>
+  <ul>
+    <% posts.each do |post| %>
+      <li><%= link_to post.title, post %> Posted <%= time_ago_in_words post.created_at %> ago</li>
+  <% end %>
+  </ul>
+</div>
