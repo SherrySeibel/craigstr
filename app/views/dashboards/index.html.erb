@@ -1,2 +1,6 @@
+<% if current_user.admin? %>
+  <%= link_to "Admin Control Board", :admin_options %>
+<% end %>
+
 <h2>Select your region</h2>
 <ul><%= render "regions", regions: @regions %></ul>
